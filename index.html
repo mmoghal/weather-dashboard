@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Dashboard</title>
+</head>
+<body>
+  <h1>Weather Dashboard</h1>
+
+  <!-- Search form -->
+  <form id="search-form">
+    <label for="city-input">Enter a city:</label>
+    <input type="text" id="city-input" name="city">
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Search history -->
+  <h2>Search History</h2>
+  <ul id="search-history">
+    <!-- List of searched cities will be dynamically added here -->
+  </ul>
+
+  <!-- Current weather display -->
+  <h2>Current Weather</h2>
+  <div id="current-weather">
+    <!-- Current weather data will be dynamically added here -->
+  </div>
+
+  <!-- 5-day forecast display -->
+  <h2>5-Day Forecast</h2>
+  <div id="five-day-forecast">
+    <!-- 5-day forecast data will be dynamically added here -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./assets/scripts/script.js"></script>
+</body>
+</html>
