@@ -127,7 +127,7 @@ function getWeatherByCity(city) {
       iconEl.src = iconUrl;
       currentDesc.prepend(iconEl);
 
-      
+
       // Call function to get 5-day forecast
       getForecast(json.name);
     })
@@ -135,6 +135,7 @@ function getWeatherByCity(city) {
 }
 
 // Get 5-day forecast
+
 function getForecast(city) {
   const apiKey = '81822968b5a226abb1a2fbacd053f10a';
   const units = 'imperial';
@@ -155,6 +156,7 @@ function getForecast(city) {
         });
         const temp = forecast.main.temp;
         const desc = forecast.weather[0].description;
+        const iconCode = forecast.weather[0].icon;
 
         const forecastItemEl = document.createElement('div');
         forecastItemEl.classList.add('forecast-item');
@@ -171,13 +173,13 @@ function getForecast(city) {
         descEl.textContent = `Description: ${desc}`;
         forecastItemEl.appendChild(descEl);
 
+        const iconEl = document.createElement('img');
+        iconEl.classList.add('forecast-icon');
+        iconEl.src = `https://openweathermap.org/img/wn/${iconCode}.png`;
+        forecastItemEl.appendChild(iconEl);
+
         forecastEl.appendChild(forecastItemEl);
       });
     })
     .catch(err => console.log(err.message));
 }
-
-
-
-
-
