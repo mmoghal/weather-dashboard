@@ -18,9 +18,15 @@ form.addEventListener('submit', (e) => {
     getWeatherByCity(searchTerm);
     addToSearchHistory(searchTerm);
   }
+  displayDateTime();
+
 });
 
-
+function displayDateTime() {
+  const dateTime = new Date();
+  const dateTimeEl = document.getElementById('date-time');
+  dateTimeEl.textContent = `Current date and time: ${dateTime}`;
+}
 
 
 
