@@ -13,10 +13,58 @@ form.addEventListener('submit', (e) => {
   const searchTerm = searchInput.value;
   if (isValidZip(searchTerm)) {
     getWeatherByZip(searchTerm);
+    addToSearchHistory(searchTerm);
   } else {
     getWeatherByCity(searchTerm);
+    addToSearchHistory(searchTerm);
   }
 });
+
+
+
+
+
+
+
+// Function to add the search term to the search history
+function addToSearchHistory(searchTerm) {
+  // Get the search history array from local storage or create a new one if it doesn't exist
+  let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+  // Add the search term to the search history array
+  searchHistory.unshift(searchTerm);
+
+  // Keep only the last 10 search terms in the search history array
+  searchHistory = searchHistory.slice(0, 10);
+
+  // Save the updated search history array to local storage
+  localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+
+  // Call the function to display the search history
+  displaySearchHistory();
+}
+
+// Function to display the search history
+function displaySearchHistory() {
+  // Get the search history array from local storage or create a new one if it doesn't exist
+  let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+  // Get the search history element from the DOM
+  const searchHistoryEl = document.getElementById('search-history');
+
+  // Clear the previous search history
+  searchHistoryEl.innerHTML = '';
+
+  // Loop through each search term in the search history and display it on the page
+  searchHistory.forEach(searchTerm => {
+    const searchItemEl = document.createElement('div');
+    searchItemEl.textContent = searchTerm;
+    searchHistoryEl.appendChild(searchItemEl);
+  });
+}
+
+
+
 
 // Functions
 function isValidZip(zip) {
@@ -105,3 +153,8 @@ function getForecast(city) {
     })
     .catch(err => console.log(err.message));
 }
+
+
+
+
+

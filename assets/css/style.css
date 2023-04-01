@@ -85,3 +85,36 @@ th {
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
+
+#search-history {
+  margin-top: 20px;
+}
+
+#search-history ul {
+  list-style: none;
+}
+
+#search-history ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+#search-history ul li span {
+  font-weight: bold;
+}
+
+#search-history ul li button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+#search-history ul li button:hover {
+  background-color: #0069d9;
+}
