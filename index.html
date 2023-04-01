@@ -8,32 +8,53 @@
 <body>
   <h1>Weather Dashboard</h1>
 
-  <!-- Search form -->
-  <form id="search-form">
-    <label for="city-input">Enter a city:</label>
-    <input type="text" id="city-input" name="city">
-    <button type="submit">Search</button>
-  </form>
+  <div class="container">
+    <form id="form">
+      <label for="search">Search by zip code or city:</label>
+      <input 
+        id="search" 
+        type="text" 
+        placeholder="Enter zip code or city name"
+        title="Please enter a valid Zip Code or city name"
+      >
+      <button type="submit">Search</button>
+    </form>
 
-  <!-- Search history -->
-  <h2>Search History</h2>
-  <ul id="search-history">
-    <!-- List of searched cities will be dynamically added here -->
-  </ul>
+    <div id="current-weather">
+      <h2>Current Weather</h2>
+      <table>
+        <tr>
+          <td>Temperature:</td>
+          <td id="temp"></td>
+        </tr>
+        <tr>
+          <td>Conditions:</td>
+          <td id="desc"></td>
+        </tr>
+        <tr>
+          <td>Humidity:</td>
+          <td id="humidity"></td>
+        </tr>
+        <tr>
+          <td>Wind Speed:</td>
+          <td id="wind"></td>
+        </tr>
+      </table>
+    </div>
 
-  <!-- Current weather display -->
-  <h2>Current Weather</h2>
-  <div id="current-weather">
-    <!-- Current weather data will be dynamically added here -->
+    <div id="forecast">
+      <h2>5-Day Forecast</h2>
+      <table id="forecast-table">
+        <tr>
+          <th>Date</th>
+          <th>Conditions</th>
+          <th>High</th>
+          <th>Low</th>
+        </tr>
+      </table>
+    </div>
+
   </div>
-
-  <!-- 5-day forecast display -->
-  <h2>5-Day Forecast</h2>
-  <div id="five-day-forecast">
-    <!-- 5-day forecast data will be dynamically added here -->
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
