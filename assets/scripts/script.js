@@ -91,6 +91,14 @@ function getWeatherByZip(zip) {
       currentDesc.innerHTML = json.weather[0].description;
       currentHumidity.innerHTML = `Humidity: ${json.main.humidity}%`;
       currentWind.innerHTML = `Wind: ${json.wind.speed} mph`;
+
+// Get weather icon
+const iconCode = json.weather[0].icon;
+const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+const iconEl = document.createElement('img');
+iconEl.src = iconUrl;
+currentDesc.prepend(iconEl);
+
       // Call function to get 5-day forecast
       getForecast(json.name);
     })
@@ -111,6 +119,15 @@ function getWeatherByCity(city) {
       currentDesc.innerHTML = json.weather[0].description;
       currentHumidity.innerHTML = `Humidity: ${json.main.humidity}%`;
       currentWind.innerHTML = `Wind: ${json.wind.speed} mph`;
+
+      // Get weather icon
+      const iconCode = json.weather[0].icon;
+      const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+      const iconEl = document.createElement('img');
+      iconEl.src = iconUrl;
+      currentDesc.prepend(iconEl);
+
+      
       // Call function to get 5-day forecast
       getForecast(json.name);
     })

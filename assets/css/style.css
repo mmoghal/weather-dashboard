@@ -118,3 +118,9 @@ tr:nth-child(even) {
 #search-history ul li button:hover {
   background-color: #0069d9;
 }
+
+#current-weather img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
