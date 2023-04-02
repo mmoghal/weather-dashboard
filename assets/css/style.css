@@ -1,21 +1,26 @@
 /* Global styles */
+
+/* Set box-sizing for all elements to border-box to include padding and borders in the element's total width and height */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Set the font family, font size, and line-height for the entire document */
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 
+/* Center the h1 element and give it a top margin */
 h1 {
   text-align: center;
   margin-top: 20px;
 }
 
+/* Create a container class with a maximum width of 1200px and margin set to auto to center it horizontally */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -23,6 +28,7 @@ h1 {
 }
 
 /* Form styles */
+/* Center the form element with flexbox and add a bottom margin */
 form {
   display: flex;
   flex-direction: column;
@@ -30,10 +36,12 @@ form {
   margin-bottom: 20px;
 }
 
+/* Add a bottom margin to the label element */
 label {
   margin-bottom: 10px;
 }
 
+/* Set the width, padding, border, and font-size of the text input */
 input[type="text"] {
   width: 100%;
   max-width: 400px;
@@ -44,6 +52,7 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
+/* Style the submit button with a background color, border-radius, and font-size */
 button[type="submit"] {
   padding: 10px;
   border-radius: 5px;
@@ -54,16 +63,19 @@ button[type="submit"] {
   font-size: 16px;
 }
 
+/* Add a background-color on hover to the submit button */
 button[type="submit"]:hover {
   background-color: #0069d9;
 }
 
 /* Weather information styles */
+/* Add a margin-top to the current-weather and forecast elements */
 #current-weather,
 #forecast {
   margin-top: 20px;
 }
 
+/* Style the table with border-collapse, width, and max-width */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -71,21 +83,25 @@ table {
   margin: 0 auto;
 }
 
+/* Style the th and td elements with padding and left-align the text */
 th,
 td {
   padding: 10px;
   text-align: left;
 }
 
+/* Style the th element with a background color and text color */
 th {
   background-color: #007bff;
   color: #fff;
 }
 
+/* Style the even rows of the table with a background color */
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
+/* Style the forecast-item class with flexbox and add a margin-bottom */
 .forecast-item {
   display: flex;
   flex-direction: column;
@@ -93,34 +109,41 @@ tr:nth-child(even) {
   margin-bottom: 20px;
 }
 
+/* Add a margin-bottom and font-size to the p elements within the forecast-item class */
 .forecast-item p {
   margin-bottom: 10px;
   font-size: 16px;
 }
 
+/* Style the forecast-icon with a height, width, and margin-right */
 .forecast-icon {
   height: 50px;
   width: 50px;
   margin-right: 10px;
 }
 
+/* Style the search-history element with a margin-top */
 #search-history {
   margin-top: 20px;
 }
 
+/* Style the unordered list inside the search history */
 #search-history ul {
   list-style: none;
 }
 
+/* Style each item of the search history list */
 #search-history ul li {
   margin-bottom: 5px;
   font-size: 14px;
 }
 
+/* Style the city name in the search history list */
 #search-history ul li span {
   font-weight: bold;
 }
 
+/* Style the button inside the search history list */
 #search-history ul li button {
   padding: 5px 10px;
   border-radius: 5px;
@@ -132,17 +155,29 @@ tr:nth-child(even) {
   margin-left: 10px;
 }
 
+/* Change the background color of the button on hover */
 #search-history ul li button:hover {
   background-color: #0069d9;
 }
 
+/* Style the weather icon in the current weather section */
 #current-weather img {
   height: 50px;
   width: 50px;
   margin-right: 10px;
 }
 
+/* Style the date and time in the current weather section */
 #date-time {
   margin-top: 20px;
-  margin-bottom: 40px
+  margin-bottom: 40px;
+}
+
+/* Style the footer section of the page */
+.footer {
+  text-align: center;
+  color: black;
+  padding: 20px;
+  margin-bottom: auto;
+  margin-top: 20px;
 }
