@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a weather dashboard that allows users to search for the weather outlook of multiple cities. Users can search for a city and view the current and future weather conditions for that city. The city is added to the search history for easy access. Users can also click on a city in the search history to view the current and future conditions for that city.
+This weather dashboard allows users to search for the weather outlook of multiple cities. Users can search for a city by entering the city name or zip code in the search box. The dashboard displays the current temperature, weather description, humidity, and wind speed, along with an icon representing the current weather condition. In addition, users can view the 5-day weather forecast for the selected city. The dashboard also stores the search history and displays it for easy access. The application can distinguish between city and zip code input, and can validate zip code inputs before making the request to the API.
 
 ## Technologies Used
 
@@ -28,7 +28,7 @@ To install and run this application, follow these steps:
 
 ## Usage
 
-To use this application, simply enter a city name or zip code in the search bar and click the "Search" button. The current weather and 5-day forecast for the city will be displayed. The search history is also displayed for easy access to previously searched cities.
+To use this weather dashboard, you can search for a city or zip code by entering it in the search bar and clicking the "Search" button. The application will display the current weather conditions and a 5-day forecast for the searched location. The search history is also displayed for easy access to previously searched cities or zip codes. 
 
 ## Credits
 
