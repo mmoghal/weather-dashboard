@@ -170,10 +170,32 @@ function displaySearchHistory() {
   // Clear the previous search history
   searchHistoryEl.innerHTML = "";
 
-  // Loop through each search term in the search history and display it on the page
-  searchHistory.forEach((searchTerm) => {
-    const searchItemEl = document.createElement("div");
-    searchItemEl.textContent = searchTerm;
-    searchHistoryEl.appendChild(searchItemEl);
+// Loop through each search term in the search history and display it on the page as a clickable item
+searchHistory.forEach((searchTerm) => {
+  const searchItemEl = document.createElement("div");
+  searchItemEl.classList.add("Search-item"); // Add a CSS class to the search item to make it clickable
+  searchItemEl.textContent = searchTerm;
+  searchItemEl.addEventListener("click", () => { // Add an event listener to the search item that retrieves the weather data for the clicked term
+    if (isValidZip(searchTerm)) {
+      getWeatherByZip(searchTerm);
+    } else {
+      getWeatherByCity(searchTerm);
+    }
+    displayDateTime();
   });
+  searchHistoryEl.appendChild(searchItemEl);
+});
 }
+
+// Define event listener for when a city in the search history is clicked
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("Search-item")) {
+    const searchTerm = e.target.textContent;
+    if(isValidZip(searchTerm)) {
+      getWeatherByZip(searchTerm);
+    } else {
+      getWeatherByCity(searchTerm);
+    }
+    displayDateTime();
+    }
+});
